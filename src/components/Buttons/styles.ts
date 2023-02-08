@@ -6,7 +6,8 @@ export const ButtonsContent = styled.div`
   display: grid;
   grid-template-columns: repeat(4, auto);
   /* grid-template-rows: repeat(5, 1fr); */
-  
+
+
   gap: 12px;
   justify-items: center;
 
@@ -18,6 +19,7 @@ export const ButtonsContent = styled.div`
     width: 64px;
     height: 64px;
     font-size: 24px;
+    color: var(--gray-100);
     
     outline: none;
     cursor: pointer;
@@ -31,7 +33,6 @@ export const ButtonsContent = styled.div`
     border-top: 1px solid var(--gray-800);
     border-left: 1px solid var(--gray-800);
     
-    background: linear-gradient(190deg, '#2D2A37', #2D2A37);
     background: radial-gradient(ellipse at center, #2D2A37 55%, ${lighten(.03, '#2D2A37')});
 
     text-transform: uppercase;
@@ -41,16 +42,19 @@ export const ButtonsContent = styled.div`
     transition:
       box-shadow .05s linear,
       margin .05s linear;
-
         
     &:active {
       background: radial-gradient(circle at center, ${darken(.02, '#2D2A37')}, #2D2A37);
       box-shadow: inset 2px 2px 3px rgba(0, 0, 0, .4);
     }
 
-  .result{
-    display: flex;
-    grid-column: span 3;
+    &:first-child{
+        color: var(--violet-300);
+    }
+
+    &.violetButton{
+      background: linear-gradient(190deg, var(--violet-600), ${lighten(.1, '#462878')});
+      /* box-shadow: inset 2px -2px 15px rgba(255, 255, 255, .08); */
+    }
   }
-}
 `

@@ -10,14 +10,15 @@ export const GlobalStyles = createGlobalStyle`
 
     --violet-600: #462878;
     --violet-400: #7F45E2;
+    --violet-300: #975DFA;
   }
   
   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--gray-100);
     font-family: 'Rubik', sans-serif;
+    /* color: var(--gray-100); */
   }
   
   body{

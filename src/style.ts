@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { darken } from "polished";
 
 export const Container = styled.div`
   display: flex;
@@ -21,7 +22,7 @@ export const Calculator = styled.div`
   display: grid;
   grid-template-rows: max-content 1fr;
 
-  border-radius: 2rem;
+  border-radius: 3rem;
 
   border-top: 1px solid lighten(var(--gray-800), 25%);
   border-left: 1px solid lighten(var(--gray-800), 25%);
@@ -33,14 +34,12 @@ export const Calculator = styled.div`
     margin .05s linear;
 
   box-shadow:
-    inset 1px 1px 2px rgba(255, 255, 255, .6),
-    1px 4px 0px 0px darken(var(--gray-800), 20%),
-    1px 4px 0px 1px #111,
-    1px 4px 2px 1px #000,
+    inset 2px 7px 6px rgba(255, 255, 255, .2),
+    inset -1px -15px 10px 10px var(--gray-800),
+    1px 3px 1px 1px ${darken(.03, '#2D2A37')},
+    1px 4px 2px 1px var(--gray-800),
 
     2px 06px 2px rgba(0, 0, 0, .15),
     3px 07px 2px rgba(0, 0, 0, .15),
-    4px 08px 2px rgba(0, 0, 0, .15),
-    5px 09px 2px rgba(0, 0, 0, .15),
     6px 10px 2px rgba(0, 0, 0, .15);
 `
