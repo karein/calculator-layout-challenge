@@ -56,5 +56,9 @@ export const ButtonsContent = styled.div`
       background: linear-gradient(190deg, var(--violet-600), ${lighten(.1, '#462878')});
       /* box-shadow: inset 2px -2px 15px rgba(255, 255, 255, .08); */
     }
+
+    &:last-child{
+      background: linear-gradient(190deg, #7F45E2, ${lighten(.05, '#7F45E2')});
+    }
   }
 `

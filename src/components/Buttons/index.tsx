@@ -1,28 +1,35 @@
+import React from 'react';
 import { ButtonsContent } from './styles'
 
-export function Buttons() {
+interface ButtonsProps {
+  handleClean: () => void,
+  handleExpression: (e: React.MouseEvent<HTMLButtonElement>) => void
+  handleCalc: () => void
+}
+
+export function Buttons({ handleClean, handleExpression, handleCalc }: ButtonsProps) {
   return (
     <ButtonsContent>
-      <button id="ce" onClick={() => console.log("cleanValue(this.id)")}>ce</button>
-      <button id="c" onClick={() => console.log("cleanValue(this.id)")}>c</button>
-      <button id="%" onClick={() => console.log("myFunction(this.id)")}>%</button>
-      <button className='violetButton' id="/" onClick={() => console.log("myFunction(this.id)")}>/</button>
-      <button id="7" onClick={() => console.log("myFunction(this.id)")}>7</button>
-      <button id="8" onClick={() => console.log("myFunction(this.id)")}>8</button>
-      <button id="9" onClick={() => console.log("myFunction(this.id)")}>9</button>
-      <button className='violetButton' id="x" onClick={() => console.log("myFunction(this.id)")}>x</button>
-      <button id="4" onClick={() => console.log("myFunction(this.id)")}>4</button>
-      <button id="5" onClick={() => console.log("myFunction(this.id)")}>5</button>
-      <button id="6" onClick={() => console.log("myFunction(this.id)")}>6</button>
-      <button className='violetButton' id="-" onClick={() => console.log("myFunction(this.id)")}>-</button>
-      <button id="1" onClick={() => console.log("myFunction(this.id)")}>1</button>
-      <button id="2" onClick={() => console.log("myFunction(this.id)")}>2</button>
-      <button id="3" onClick={() => console.log("myFunction(this.id)")}>3</button>
-      <button className='violetButton' id="+" onClick={() => console.log("myFunction(this.id)")}>+</button>
-      <button id="+/-" onClick={() => console.log("myFunction(this.id)")}>+/-</button>
-      <button id="0" onClick={() => console.log("myFunction(this.id)")}>0</button>
-      <button id="," onClick={() => console.log("myFunction(this.id)")}>,</button>
-      <button className='violetButton' id="=" onClick={() => console.log("calc()")}>=</button>
+      <button value="ce" onClick={handleClean}>ce</button>
+      <button value="c" onClick={() => console.log("cleanValue(this.id)")}>c</button>
+      <button value="%" onClick={handleExpression}>%</button>
+      <button className='violetButton' value="/" onClick={handleExpression}>/</button>
+      <button value="7" onClick={handleExpression}>7</button>
+      <button value="8" onClick={handleExpression}>8</button>
+      <button value="9" onClick={handleExpression}>9</button>
+      <button className='violetButton' value="x" onClick={handleExpression}>x</button>
+      <button value="4" onClick={handleExpression}>4</button>
+      <button value="5" onClick={handleExpression}>5</button>
+      <button value="6" onClick={handleExpression}>6</button>
+      <button className='violetButton' value="-" onClick={handleExpression}>-</button>
+      <button value="1" onClick={handleExpression}>1</button>
+      <button value="2" onClick={handleExpression}>2</button>
+      <button value="3" onClick={handleExpression}>3</button>
+      <button className='violetButton' value="+" onClick={handleExpression}>+</button>
+      <button value="+/-" onClick={handleExpression}>+/-</button>
+      <button value="0" onClick={handleExpression}>0</button>
+      <button value="," onClick={handleExpression}>,</button>
+      <button className='violetButton' value="=" onClick={handleCalc}>=</button>
     </ButtonsContent >
   );
 }

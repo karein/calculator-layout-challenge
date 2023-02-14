@@ -1,10 +1,15 @@
 import { ScreenContent, History, ValueContent } from './styles'
 
-export function Screen() {
+interface screenProps {
+  historic: string
+  value: string
+}
+
+export function Screen({ value, historic }: screenProps) {
   return (
     <ScreenContent>
-      <History>0</History>
-      <ValueContent>=<strong>0</strong></ValueContent>
+      <History>{historic}</History>
+      <ValueContent>=<strong>{value}</strong></ValueContent>
     </ScreenContent>
   );
 }
